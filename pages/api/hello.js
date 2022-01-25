@@ -3,8 +3,11 @@
 export default function handler(req, res) {
   const DEPLOY_URL = process.env.DEPLOY_URL;
   const DEPLOY_PRIME_URL = process.env.DEPLOY_PRIME_URL;
+  console.info("DEPLOY_URL: ", DEPLOY_URL);
+  console.info("DEPLOY_PRIME_URL: ", DEPLOY_PRIME_URL);
   res.status(200).json({
     DEPLOY_URL,
     DEPLOY_PRIME_URL,
+    message: "hello world",
   });
 }
